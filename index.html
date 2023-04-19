@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="style.css" media="screen" charset="utf-8">
   </head>
   <body>
-    <div class="matrix page">
+    <header class="matrix page">
       <div class="matrix__wrapper">
         <img class="matrix__img" src="./eisenhower-matrix.jpg">
         <a class="matrix__info"
@@ -14,16 +14,16 @@
             Want more details?
         </a>
       </div>
-    </div>
-    <div class="task-list page">
-      <div class="task-block">
+    </header>
+    <main class="task-list page">
+      <section class="task-block">
         <h3 class="task-block__header">Add Item</h3>
         <div class="task-block__wrapper">
           <input class="task-block__input" type="text">
           <button class="task-block__btn task-block__btn_add">Add</button>
         </div>
-      </div>
-      <div class="task-block">
+      </section>
+      <section class="task-block">
         <h3 class="task-block__header">Todo</h3>
         <ul class="task-block__list">
           <li class="task-block__item">
@@ -45,8 +45,8 @@
             </button>
           </li>
         </ul>
-      </div>
-      <div class="task-block">
+      </section>
+      <section class="task-block">
         <h3 class="task-block__header">Completed</h3>
         <ul class="task-block__list task-block__list_completed">
           <li class="task-block__item">
@@ -59,8 +59,8 @@
             </button>
           </li>
         </ul>
-      </div>
-    </div>
+      </section>
+    </main>
     <script src="app.js"></script>
   </body>
 </html>
