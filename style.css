@@ -4,42 +4,44 @@ body {
   color: #333;
   font-family: Lato, sans-serif;
 }
-.aaa {
+.matrix {
   width: 500px;
   margin: 0 auto;
   display: block;
   text-align: right;
 }
-.aaa img {
+.matrix .matrix__img {
   width: 100%;
 }
-.aaa .more_inf {
+.matrix .matrix__info {
   font-family: fantasy, cursive;
 }
 
 @media (max-width:768px) {
-  .aaa {
+  .matrix {
     text-align: center;
   }
 }
-.centered-main-page-element {
+.task-list{
   display: block;
   width: 500px;
   margin: 0 auto 0;
 }
-.task {
+.task,
+.task-block__label,
+.task-block__input {
   width: 56%;
   display: inline-block;
   flex-grow: 1
 }
-.task-row-wrapper {
+.task-block__wrapper {
   display: flex;
 }
 ul {
   margin:0;
   padding: 0px;
 }
-li, h3 {
+li, h3, .task-block__item {
   list-style:none;
 }
 input,button{
@@ -59,7 +61,7 @@ button:hover {
 }
 /* Heading */
 h3,
-label[for="new-task"] {
+.task-block__header {
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -85,16 +87,16 @@ input[type="text"]:focus {
 }
 
 /* New Task */
-label[for="new-task"] {
+.task-block__header {
   display: block;
   margin: 0 0 20px;
 }
-input#new-task {
+.task-block__input {
   width: 318px;
 }
 
 /* Task list */
-li {
+li, .task-block__item {
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
@@ -106,10 +108,18 @@ li {
 li > * {
   vertical-align: middle;
 }
+.task-block__item > *{
+  vertical-align: middle;
+}
 
 li > input[type="checkbox"] {
   margin: 0 10px;
 }
+
+.task-block__item > input[type="checkbox"] {
+  margin: 0 10px;
+}
+
 li > label {
   padding-left: 10px;
   box-sizing: border-box;
@@ -119,17 +129,17 @@ li > label {
 li >    input[type="text"] {
   width: 226px
 }
-button.delete img {
+button.task-block__btn_delete img {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
-button.delete img:hover {
+button.task-block__btn_delete img:hover {
   transform: rotateZ(0);
 }
 
 /* Completed */
-ul#completed-tasks label {
+ul.task-block__list_completed label {
   text-decoration: line-through
   color: #888;
 }
@@ -139,11 +149,11 @@ ul li input[type=text] {
   display:none
 }
 
-ul li.editMode input[type=text] {
+ul li.task-block__item_edit input[type=text] {
   display:inline-block;
   width:224px
 }
 
-ul li.editMode label {
+ul li.task-block__item_edit label {
   display:none;
 }
