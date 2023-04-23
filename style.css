@@ -4,6 +4,9 @@ body{
   margin: 0;
   padding: 0;
 }
+h3{
+  margin-block-end: 0px;
+}
 .page {
   background-color: #f8f8f8;
   color: #333;
@@ -61,6 +64,7 @@ body{
 .task-block__item {
   list-style: none;
 }
+
 .task-block__checkbox,
 .task-block__input,
 .task-block__btn{
@@ -86,7 +90,6 @@ body{
   font-size: 15px;
   border-bottom: 2px solid #333;
   padding: 30px 0 10px;
-  margin: 0;
   text-transform: uppercase;
 }
 .task-block__input {
@@ -108,7 +111,7 @@ body{
 /* New Task */
 .task-block__header {
   display: block;
-  margin: 0 0 20px;
+  margin: 0 0;
 }
 .task-block__input {
   width: 318px;
@@ -174,4 +177,13 @@ body{
 .task-block__label {
   display: none;
 }
-
+.task-block__header{
+  padding-top: 40px;
+}
+.task-block:nth-child(1) > .task-block__header{
+  margin-bottom: 20px;
+  padding-top: 45px;
+}
+.task-block:last-child > .task-block__header{
+  padding-top: 25px;
+}
